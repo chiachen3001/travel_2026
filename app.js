@@ -826,6 +826,17 @@ function renderDayDetail() {
         <span class="route-map-key">數字 = 停靠順序</span>
       </div>
       <div class="daily-route-map" id="daily-route-map"></div>
+      <div class="route-map-actions">
+        ${getGoogleMapsRouteLinks(day.routeStops || [])
+          .map(
+            (route, index, routes) => `
+              <a class="route-map-link" href="${route}" target="_blank" rel="noreferrer">
+                Google Maps${routes.length > 1 ? ` 動線 ${index + 1}` : " 查看今日動線"}
+              </a>
+            `
+          )
+          .join("")}
+      </div>
       <p class="route-map-note">連線用來快速看行程順序；實際步行、開車或大眾運輸路線請點各行程的地圖按鈕。</p>
     </section>
     <section class="timeline-list-card">
@@ -932,6 +943,27 @@ function renderRouteMap(day) {
 
 function getGoogleMapsUrl(query) {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+}
+
+function getGoogleMapsRouteLinks(stops) {
+  const maxStopsPerRoute = 5;
+  const routes = [];
+
+  for (let start = 0; start < stops.length - 1; start += maxStopsPerRoute - 1) {
+    const segment = stops.slice(start, start + maxStopsPerRoute);
+    const origin = segment[0].coordinates.join(",");
+    const destination = segment[segment.length - 1].coordinates.join(",");
+    const waypoints = segment.slice(1, -1).map((stop) => stop.coordinates.join(",")).join("|");
+    const params = new URLSearchParams({ api: "1", origin, destination });
+
+    if (waypoints) {
+      params.set("waypoints", waypoints);
+    }
+
+    routes.push(`https://www.google.com/maps/dir/?${params.toString()}`);
+  }
+
+  return routes;
 }
 
 function getNaverMapUrl(query) {
