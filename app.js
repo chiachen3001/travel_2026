@@ -711,6 +711,7 @@ function renderDayPills() {
 
 function renderDayDetail() {
   const day = tripData.days[state.activeDayIndex];
+  const isKoreaDay = day.location.includes("Busan");
   dayDetailEl.innerHTML = `
     <div class="detail-top">
       <section class="detail-hero">
@@ -737,7 +738,33 @@ function renderDayDetail() {
               <div class="timeline-row">
                 <div class="timeline-time">${event.time}</div>
                 <div class="timeline-copy">
-                  <strong>${event.title}</strong>
+                  <div class="timeline-title-row">
+                    <strong>${event.title}</strong>
+                    <div class="map-actions">
+                      <a
+                        class="map-link"
+                        href="${getGoogleMapsUrl(event.mapQuery || event.title)}"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Google Maps
+                      </a>
+                      ${
+                        isKoreaDay
+                          ? `
+                            <a
+                              class="map-link naver-link"
+                              href="${getNaverMapUrl(event.mapQuery || event.title)}"
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              Naver Map
+                            </a>
+                          `
+                          : ""
+                      }
+                    </div>
+                  </div>
                   <span>${event.note}</span>
                 </div>
               </div>
@@ -747,6 +774,14 @@ function renderDayDetail() {
       </div>
     </section>
   `;
+}
+
+function getGoogleMapsUrl(query) {
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+}
+
+function getNaverMapUrl(query) {
+  return `https://map.naver.com/p/search/${encodeURIComponent(query)}`;
 }
 
 function renderChecklistTabs() {
