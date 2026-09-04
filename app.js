@@ -738,8 +738,13 @@ function renderDayDetail() {
               <div class="timeline-row">
                 <div class="timeline-time">${event.time}</div>
                 <div class="timeline-copy">
-                  <div class="timeline-title-row">
-                    <strong>${event.title}</strong>
+                  <details class="timeline-event">
+                    <summary>
+                      <strong>${event.title}</strong>
+                      <span class="event-expand-label">查看備註與地圖</span>
+                    </summary>
+                    <div class="timeline-event-content">
+                      <p>${event.note || "尚未補充備註"}</p>
                     <div class="map-actions">
                       <a
                         class="map-link"
@@ -764,8 +769,8 @@ function renderDayDetail() {
                           : ""
                       }
                     </div>
-                  </div>
-                  <span>${event.note}</span>
+                    </div>
+                  </details>
                 </div>
               </div>
             `
