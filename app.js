@@ -200,6 +200,11 @@ const tripData = {
       anchor: "第一晚目標很簡單：順利入境、進西面、買香蕉牛奶、叫炸雞，讓身體直接切到旅行模式。",
       stay: "東橫INN 西面站",
       tags: ["Arrival", "西面", "炸雞"],
+      routeStops: [
+        { label: "桃園機場", coordinates: [25.0797, 121.2342] },
+        { label: "金海機場", coordinates: [35.1796, 128.9382] },
+        { label: "西面", coordinates: [35.1579, 129.0593] }
+      ],
       events: [
         { time: "16:40", title: "IT606 桃園出發", note: "桃園 TPE → 釜山金海 PUS。" },
         { time: "19:55", title: "抵達釜山金海機場", note: "入境後準備進市區。" },
@@ -217,6 +222,12 @@ const tripData = {
       anchor: "這天是釜山最完整的賞楓與購物日，行程核心是梵魚寺早去避人潮，下午把李在模和西面採買一口氣完成。",
       stay: "東橫INN 西面站",
       tags: ["Temple", "Shopping", "Pizza"],
+      routeStops: [
+        { label: "西面早餐", coordinates: [35.1579, 129.0593] },
+        { label: "梵魚寺", coordinates: [35.2839, 129.0686] },
+        { label: "西面逛街", coordinates: [35.1574, 129.0588] },
+        { label: "密陽豬肉湯飯", coordinates: [35.1568, 129.0585] }
+      ],
       events: [
         { time: "07:30", title: "All Sunday Bagel 早餐", note: "西面站附近暖身。" },
         { time: "09:00", title: "出發梵魚寺", note: "地鐵約 1 小時，早去人少、賞楓更舒服。" },
@@ -237,6 +248,13 @@ const tripData = {
       anchor: "上午醫美是主軸，下午是海線模式，海東龍宮寺、海雲台市集與晚餐一路接完。",
       stay: "東橫INN 西面站",
       tags: ["醫美", "Haeundae", "Temple"],
+      routeStops: [
+        { label: "西面", coordinates: [35.1579, 129.0593] },
+        { label: "海東龍宮寺", coordinates: [35.1887, 129.223] },
+        { label: "海雲台市集", coordinates: [35.1608, 129.1605] },
+        { label: "미포집 海雲台", coordinates: [35.1601, 129.1636] },
+        { label: "回西面", coordinates: [35.1579, 129.0593] }
+      ],
       events: [
         { time: "09:00", title: "螞蟻家 西面2號店 早餐", note: "先吃飽再進長時段療程。" },
         { time: "10:00", title: "本思中心店", note: "電波＋音波＋ONDA＋視情況保養，約 4 到 5 小時。" },
@@ -256,6 +274,13 @@ const tripData = {
       anchor: "這天的重點是留一點早午餐快樂，但不壓縮機場緩衝；晚上到博多只要輕鬆散步吃東西就好。",
       stay: "montan HAKATA",
       tags: ["Transit", "Airport", "Fukuoka"],
+      routeStops: [
+        { label: "西面", coordinates: [35.1579, 129.0593] },
+        { label: "釜山站", coordinates: [35.1151, 129.0422] },
+        { label: "金海機場", coordinates: [35.1796, 128.9382] },
+        { label: "福岡機場", coordinates: [33.5859, 130.4507] },
+        { label: "博多", coordinates: [33.5904, 130.4207] }
+      ],
       events: [
         { time: "08:00", title: "Suyeong 豬肉湯飯 早餐", note: "24 小時，飯店步行約 12 分。" },
         { time: "09:30", title: "濟州家 釜山站", note: "海膽拌飯或鮑魚粥。" },
@@ -274,6 +299,12 @@ const tripData = {
       anchor: "白天門司港散步，下午直奔場館，晚上住小倉，這天是整趟行程最明確的單日主題。",
       stay: "Hostel & Dining TangaTable",
       tags: ["Concert", "Mojiko", "Kitakyushu"],
+      routeStops: [
+        { label: "博多", coordinates: [33.5904, 130.4207] },
+        { label: "門司港", coordinates: [33.9458, 130.9603] },
+        { label: "Kitakyushu Messe", coordinates: [33.8865, 130.8835] },
+        { label: "小倉", coordinates: [33.8832, 130.8825] }
+      ],
       events: [
         { time: "早上", title: "博多站買早餐 → 博多 → 小倉", note: "行李寄放博多站，JR 約 1 小時。" },
         { time: "午前", title: "門司港", note: "唐戶市場、日清講和紀念館、赤間神宮。" },
@@ -293,6 +324,13 @@ const tripData = {
       anchor: "這天很吃節奏感：早餐後騎腳踏車跑神社，中午 Outlet，下午卡整理券，傍晚賭光之道，晚上再回福岡。",
       stay: "montan HAKATA",
       tags: ["Shrines", "Outlet", "Sunset"],
+      routeStops: [
+        { label: "小倉", coordinates: [33.8832, 130.8825] },
+        { label: "北九州 Outlet", coordinates: [33.8687, 130.7848] },
+        { label: "宮地嶽神社", coordinates: [33.7669, 130.4878] },
+        { label: "博多", coordinates: [33.5904, 130.4207] },
+        { label: "天神晚餐", coordinates: [33.5902, 130.3983] }
+      ],
       events: [
         { time: "早上", title: "GREEN GRASS 早餐", note: "Check-out 後步行前往。" },
         { time: "上午", title: "騎腳踏車串神社", note: "到津八幡神社、飛幡八幡宮、岡田宮、一宮神社。" },
@@ -312,6 +350,13 @@ const tripData = {
       anchor: "這天是典型把體力交給包車的一天，行程重點在風景與溫泉，晚上回福岡吃奴奴雞。",
       stay: "montan HAKATA",
       tags: ["Klook", "Nature", "Onsen"],
+      routeStops: [
+        { label: "上色見熊野座神社", coordinates: [32.8587, 131.1483] },
+        { label: "草千里", coordinates: [32.9075, 131.0851] },
+        { label: "阿蘇山", coordinates: [32.8847, 131.1042] },
+        { label: "黑川溫泉", coordinates: [33.0822, 131.1423] },
+        { label: "回博多", coordinates: [33.5904, 130.4207] }
+      ],
       events: [
         { time: "全天", title: "Klook 包車一日遊", note: "上色見熊野座神社＋草千里＋阿蘇山＋黑川溫泉。" },
         { time: "早中餐", title: "途中隨意", note: "保留彈性。" },
@@ -328,6 +373,13 @@ const tripData = {
       anchor: "這天把神社、美術館、米飛兔、Uniqlo 和蒸鰻魚飯串在一起，屬於很滿但很順的福岡日。",
       stay: "montan HAKATA",
       tags: ["Dazaifu", "Museum", "Tenjin"],
+      routeStops: [
+        { label: "太宰府天滿宮", coordinates: [33.5214, 130.534] },
+        { label: "竈門神社", coordinates: [33.533, 130.5521] },
+        { label: "九州國立博物館", coordinates: [33.521, 130.5364] },
+        { label: "天神", coordinates: [33.5902, 130.3983] },
+        { label: "六本松", coordinates: [33.5787, 130.3808] }
+      ],
       events: [
         { time: "午前", title: "太宰府天滿宮", note: "梅枝餅、星巴克、米飛兔、Uniqlo 太宰府店、みっふぃーおやつ堂。" },
         { time: "午前", title: "竈門神社", note: "鬼滅聖地，秋天楓葉漂亮。" },
@@ -347,6 +399,14 @@ const tripData = {
       anchor: "長崎這天偏歷史與散步感，真正的關鍵在車票與節奏，不然整體會變得很趕。",
       stay: "montan HAKATA",
       tags: ["Nagasaki", "Train", "History"],
+      routeStops: [
+        { label: "博多站", coordinates: [33.5904, 130.4207] },
+        { label: "長崎站", coordinates: [32.7527, 129.8705] },
+        { label: "原爆資料館", coordinates: [32.7752, 129.8636] },
+        { label: "新地中華街", coordinates: [32.7384, 129.8751] },
+        { label: "眼鏡橋", coordinates: [32.7499, 129.8844] },
+        { label: "回博多", coordinates: [33.5904, 130.4207] }
+      ],
       events: [
         { time: "08:54", title: "博多站買早餐 → 搭リレーかもめ17号", note: "9/29 早上 10:00 開搶指定席。" },
         { time: "約10:20", title: "抵達長崎，換乘至浦上站", note: "購買路面電車一日券。" },
@@ -367,6 +427,14 @@ const tripData = {
       anchor: "一早衝相島看貓，中午後回市區跑神社與採買，這天是超典型的旅行貪心日，但很可愛。",
       stay: "montan HAKATA",
       tags: ["Cat Island", "Shrines", "Shopping"],
+      routeStops: [
+        { label: "博多站", coordinates: [33.5904, 130.4207] },
+        { label: "新宮漁港", coordinates: [33.7087, 130.4357] },
+        { label: "相島", coordinates: [33.7104, 130.4256] },
+        { label: "紅葉八幡宮", coordinates: [33.5732, 130.3436] },
+        { label: "藥院", coordinates: [33.5781, 130.406] },
+        { label: "天神", coordinates: [33.5902, 130.3983] }
+      ],
       events: [
         { time: "07:20", title: "博多站買早餐 → 搭 JR", note: "先往福工大前站移動。" },
         { time: "07:45", title: "福工大前站換巴士", note: "搭 08:07 那班。" },
@@ -390,6 +458,11 @@ const tripData = {
       anchor: "把體力交給包車，讓這天成為純風景模式，餐食保持彈性反而更舒服。",
       stay: "montan HAKATA",
       tags: ["Klook", "Bridge", "Nature"],
+      routeStops: [
+        { label: "秋芳洞", coordinates: [34.2428, 131.304] },
+        { label: "元乃隅神社", coordinates: [34.3412, 131.0286] },
+        { label: "角島大橋", coordinates: [34.3482, 130.8817] }
+      ],
       events: [
         { time: "全天", title: "Klook 包車一日遊", note: "秋芳洞＋元乃隅神社＋角島大橋。" },
         { time: "三餐", title: "隨遇而安", note: "當天視體力和景點節奏決定。" }
@@ -404,6 +477,14 @@ const tripData = {
       anchor: "最後完整一天走市區神社線，帶一點小孩心情去麵包超人博物館，再把採買補齊。",
       stay: "Hotel La Foresta",
       tags: ["City Walk", "Shopping", "Shrines"],
+      routeStops: [
+        { label: "渡邊通", coordinates: [33.5822, 130.4057] },
+        { label: "警固神社", coordinates: [33.587, 130.3982] },
+        { label: "東長寺", coordinates: [33.5944, 130.4155] },
+        { label: "住吉神社", coordinates: [33.5833, 130.414] },
+        { label: "櫛田神社", coordinates: [33.5932, 130.411] },
+        { label: "麵包超人博物館", coordinates: [33.5955, 130.4089] }
+      ],
       events: [
         { time: "早餐", title: "Onigiri 渡邊通", note: "飯糰先暖身。" },
         { time: "上午", title: "警固神社 → 東長寺 → 住吉神社 → 櫛田神社", note: "天神＋博多市區順著走。" },
@@ -422,6 +503,11 @@ const tripData = {
       anchor: "最後一天的關鍵是保留伴手禮與機場緩衝，心情上就是舒服收尾，不再塞景點。",
       stay: "回家",
       tags: ["Souvenir", "Airport", "Return"],
+      routeStops: [
+        { label: "博多站", coordinates: [33.5904, 130.4207] },
+        { label: "福岡機場", coordinates: [33.5859, 130.4507] },
+        { label: "桃園機場", coordinates: [25.0797, 121.2342] }
+      ],
       events: [
         { time: "早上", title: "行李寄放博多站 → 早餐", note: "博多站附近隨意吃，順便逛 Uniqlo 與 GU。" },
         { time: "上午", title: "買明太子等伴手禮", note: "把最後清單補齊。" },
@@ -570,6 +656,7 @@ const flightCardsEl = document.getElementById("flight-cards");
 const stayCardsEl = document.getElementById("stay-cards");
 const noteGridEl = document.getElementById("note-grid");
 const transferListEl = document.getElementById("transfer-list");
+let dailyRouteMap;
 
 init();
 
@@ -730,6 +817,17 @@ function renderDayDetail() {
         </div>
       </aside>
     </div>
+    <section class="route-map-card">
+      <div class="route-map-heading">
+        <div>
+          <span class="route-map-kicker">TODAY'S ROUTE</span>
+          <h3>今日走動線圖</h3>
+        </div>
+        <span class="route-map-key">數字 = 停靠順序</span>
+      </div>
+      <div class="daily-route-map" id="daily-route-map"></div>
+      <p class="route-map-note">連線用來快速看行程順序；實際步行、開車或大眾運輸路線請點各行程的地圖按鈕。</p>
+    </section>
     <section class="timeline-list-card">
       <div class="timeline-list">
         ${day.events
@@ -779,6 +877,57 @@ function renderDayDetail() {
       </div>
     </section>
   `;
+  renderRouteMap(day);
+}
+
+function renderRouteMap(day) {
+  const mapEl = document.getElementById("daily-route-map");
+  const stops = day.routeStops || [];
+
+  if (!mapEl || !stops.length) {
+    return;
+  }
+
+  if (!window.L) {
+    mapEl.innerHTML = '<p class="map-load-error">地圖載入失敗，請確認網路後重新整理。</p>';
+    return;
+  }
+
+  if (dailyRouteMap) {
+    dailyRouteMap.remove();
+  }
+
+  dailyRouteMap = window.L.map(mapEl, {
+    zoomControl: true,
+    scrollWheelZoom: false
+  });
+
+  window.L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(dailyRouteMap);
+
+  const routeLine = stops.map((stop) => stop.coordinates);
+  window.L.polyline(routeLine, {
+    color: "#ff7b56",
+    weight: 4,
+    opacity: 0.82,
+    dashArray: "8 8"
+  }).addTo(dailyRouteMap);
+
+  stops.forEach((stop, index) => {
+    const marker = window.L.marker(stop.coordinates, {
+      icon: window.L.divIcon({
+        className: "route-marker-wrap",
+        html: `<span class="route-marker">${index + 1}</span>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 15]
+      })
+    }).addTo(dailyRouteMap);
+
+    marker.bindPopup(`<strong>${index + 1}. ${stop.label}</strong>`);
+  });
+
+  dailyRouteMap.fitBounds(routeLine, { padding: [32, 32], maxZoom: 13 });
 }
 
 function getGoogleMapsUrl(query) {
@@ -944,6 +1093,10 @@ function bindPanelSwitching() {
     });
 
     window.scrollTo({ top: 0, behavior: "smooth" });
+
+    if (panelId === "timeline" && dailyRouteMap) {
+      window.setTimeout(() => dailyRouteMap.invalidateSize(), 120);
+    }
   };
 
   panelButtons.forEach((button) => {
